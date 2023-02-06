@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>JS Drum Kit</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+
+  <div class="keys">
+    <div data-key="65" class="key">
+      <kbd>A</kbd>
+      <span class="sound">clap</span>
+    </div>
+    <div data-key="83" class="key">
+      <kbd>S</kbd>
+      <span class="sound">hihat</span>
+    </div>
+    <div data-key="68" class="key">
+      <kbd>D</kbd>
+      <span class="sound">kick</span>
+    </div>
+    <div data-key="70" class="key">
+      <kbd>F</kbd>
+      <span class="sound">openhat</span>
+    </div>
+    <div data-key="71" class="key">
+      <kbd>G</kbd>
+      <span class="sound">boom</span>
+    </div>
+    <div data-key="72" class="key">
+      <kbd>H</kbd>
+      <span class="sound">ride</span>
+    </div>
+    <div data-key="74" class="key">
+      <kbd>J</kbd>
+      <span class="sound">snare</span>
+    </div>
+    <div data-key="75" class="key">
+      <kbd>K</kbd>
+      <span class="sound">tom</span>
+    </div>
+    <div data-key="76" class="key">
+      <kbd>L</kbd>
+      <span class="sound">tink</span>
+    </div>
+  </div>
+
+  <audio data-key="65" src="assets/sounds/clap.wav"></audio>
+  <audio data-key="83" src="assets/sounds/hihat.wav"></audio>
+  <audio data-key="68" src="assets/sounds/kick.wav"></audio>
+  <audio data-key="70" src="assets/sounds/openhat.wav"></audio>
+  <audio data-key="71" src="assets/sounds/boom.wav"></audio>
+  <audio data-key="72" src="assets/sounds/ride.wav"></audio>
+  <audio data-key="74" src="assets/sounds/snare.wav"></audio>
+  <audio data-key="75" src="assets/sounds/tom.wav"></audio>
+  <audio data-key="76" src="assets/sounds/tink.wav"></audio>
+
+
+
+
+
+
+  <script>
+    let clap = new Audio('assets/sounds/clap.wav');
+let hihat = new Audio('assets/sounds/hihat.wav');
+let kick = new Audio('assets/sounds/kick.wav');
+let openhat = new Audio('assets/sounds/openhat.wav');
+let boom = new Audio('assets/sounds/boom.wav');
+let ride = new Audio('assets/sounds/ride.wav');
+let snare = new Audio('assets/sounds/snare.wav');
+let tom = new Audio('assets/sounds/tom.wav');
+let tink = new Audio('assets/sounds/tink.wav');
+
+document.addEventListener('keyup',(event) => {
+    if (event.key === "a") {
+        clap.play();
+    } else if (event.key === "s") {
+        hihat.play();
+    } else if (event.key ==="d") {
+        kick.play();
+    } else if (event.key === "f") {
+        openhat.play();
+    } else if (event.key === "g") {
+        boom.play();
+    } else if (event.key === "h") {
+        ride.play();
+    } else if (event.key ==="j") {
+        snare.play();
+    } else if (event.key ==="k") {
+        tom.play();        
+    } else if (event.key === "l") {
+        tink.play();
+    }
+})
+  </script>
+</body>
+
+</html>
